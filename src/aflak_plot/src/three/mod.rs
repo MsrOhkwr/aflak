@@ -206,7 +206,7 @@ where
         Vertex{pos: [1.0, 1.0, 0.0], texcoord: [1.0, 0.0]},
     ]).unwrap();
     let index_buffer = glium::index::NoIndices(glium::index::PrimitiveType::TriangleFan);
-    let shape = image.dim();
+    let shape = image.dim(); // max texture size is 2048
     let mut volume_data = vec![vec![vec![0f32; shape.2]; shape.1]; shape.0];
     let mut min_val = std::f32::MAX;
     let mut max_val = 0f32;
